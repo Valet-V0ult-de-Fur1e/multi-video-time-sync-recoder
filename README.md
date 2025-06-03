@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Multi Video Recorder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Приложение для синхронизированного воспроизведения нескольких видео с временными метками. Позволяет загружать и воспроизводить видеофайлы, автоматически синхронизируя их по времени на основе меток в именах файлов.
 
-## Available Scripts
+## Основные возможности
 
-In the project directory, you can run:
+- Загрузка и синхронизированное воспроизведение нескольких видео
+- Поддержка различных форматов временных меток в именах файлов
+- Гибкое управление скоростью воспроизведения (0.25x - 10x)
+- Интуитивно понятный интерфейс с возможностью перемотки
+- Сохранение и загрузка конфигурации окон
 
-### `npm start`
+## Поддерживаемые форматы имен файлов
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Приложение поддерживает следующие форматы временных меток в именах файлов:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Формат с датой и временем: `YYYY.MM.DD HH_MM_SS`
+   ```
+   рлс id 3 время 2025.05.26 00_06_40 цели 71_75.mp4
+   ```
 
-### `npm test`
+2. Формат с одним временем: `HH-MM-SS`
+   ```
+   video_12-30-00.mp4
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Формат с двумя временами: `HH-MM-SS-HH-MM-SS`
+   ```
+   video_12-30-00-13-45-00.mp4
+   ```
 
-### `npm run build`
+4. Формат с длительностью: `_Xd` (дни) или `_Xm` (минуты)
+   ```
+   video_12-30-00_1d.mp4  // длительность 1 день
+   video_12-30-00_30m.mp4 // длительность 30 минут
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> **Примечание**: Если в имени файла указано только начальное время, конечное время будет автоматически определено из длительности видео после его загрузки.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Установка и запуск
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Клонируйте репозиторий:
+   ```bash
+   git clone [url-репозитория]
+   cd multi-video-recorder
+   ```
 
-### `npm run eject`
+2. Установите зависимости:
+   ```bash
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Запустите приложение:
+   ```bash
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Использование
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Нажмите "Добавить окно" для создания нового окна видео
+2. Загрузите видеофайл в каждое окно, перетащив файл или выбрав его через диалог
+3. При необходимости измените название окна, нажав на иконку редактирования
+4. После загрузки всех видео нажмите "Начать просмотр"
+5. Используйте элементы управления для синхронизированного воспроизведения:
+   - Кнопки воспроизведения/паузы
+   - Ползунок для навигации по видео
+   - Выбор скорости воспроизведения
+   - Кнопки для сохранения/загрузки конфигурации
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Сохранение конфигурации
 
-## Learn More
+Вы можете сохранить текущую конфигурацию окон и загрузить её позже:
+- Нажмите "Сохранить конфигурацию" для сохранения текущих настроек
+- Используйте "Загрузить конфигурацию" для восстановления сохраненных настроек
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Технологии
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- React
+- CSS3
+- HTML5 Video API
 
-### Code Splitting
+## Лицензия
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+MIT

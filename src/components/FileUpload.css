@@ -1,0 +1,203 @@
+.file-upload {
+  background: #2a2a2a;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.config-button,
+.add-window-button,
+.reset-windows-button,
+.save-config-button,
+.load-config-button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.config-button:hover,
+.add-window-button:hover,
+.reset-windows-button:hover,
+.save-config-button:hover,
+.load-config-button:hover {
+  background: #45a049;
+}
+
+.windows-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.window-item {
+  background: #333;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.window-header {
+  margin-bottom: 10px;
+}
+
+.window-name {
+  margin: 0;
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.window-name:hover {
+  background: #444;
+}
+
+.edit-icon {
+  font-size: 14px;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.window-name:hover .edit-icon {
+  opacity: 1;
+}
+
+.window-name-edit {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.window-name-input {
+  flex: 1;
+  background: #444;
+  border: 1px solid #666;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.window-name-input:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.window-name-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.save-name-button,
+.cancel-name-button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+.save-name-button {
+  color: #4CAF50;
+}
+
+.save-name-button:hover {
+  background: rgba(76, 175, 80, 0.2);
+}
+
+.cancel-name-button {
+  color: #ff4444;
+}
+
+.cancel-name-button:hover {
+  background: rgba(255, 68, 68, 0.2);
+}
+
+.upload-area {
+  border: 2px dashed #666;
+  border-radius: 4px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  margin-bottom: 10px;
+}
+
+.upload-area:hover {
+  border-color: #4CAF50;
+}
+
+.upload-placeholder {
+  color: #999;
+  font-size: 14px;
+}
+
+.file-info {
+  color: #fff;
+  text-align: left;
+}
+
+.file-name {
+  font-weight: bold;
+  margin-bottom: 8px;
+  word-break: break-all;
+}
+
+.time-range {
+  font-size: 14px;
+  color: #4CAF50;
+}
+
+.invalid-time-range {
+  font-size: 14px;
+  color: #ff4444;
+}
+
+.remove-window-button {
+  background: #ff4444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.2s;
+  width: 100%;
+}
+
+.remove-window-button:hover {
+  background: #cc0000;
+}
+
+@media (max-width: 768px) {
+  .windows-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .header-buttons {
+    flex-direction: column;
+  }
+  
+  .header-buttons button,
+  .header-buttons label {
+    width: 100%;
+  }
+}

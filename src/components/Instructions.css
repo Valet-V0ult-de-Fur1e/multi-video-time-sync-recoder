@@ -1,0 +1,45 @@
+.instructions {
+  background: #2a2a2a;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.instructions h2 {
+  color: #fff;
+  margin: 0 0 20px 0;
+  font-size: 1.5em;
+}
+
+.instructions-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.instruction-section {
+  background: #333;
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.instruction-section h3 {
+  color: #4CAF50;
+  margin: 0 0 12px 0;
+  font-size: 1.2em;
+}
+
+.instruction-section ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #ccc;
+}
+
+.instruction-section li {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.instruction-section li:last-child {
+  margin-bottom: 0;
+} 
